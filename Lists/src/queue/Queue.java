@@ -30,4 +30,9 @@ public class Queue {
             return result;
         }
     }
+
+    public boolean contains (String s){
+        return false;
+    }
+
 }
