@@ -9,21 +9,39 @@ public class CuSum {
             InputStreamReader(System.in));
 
     // for comparison, here is an iterative version
-    public static int iterativeCuSum(int n){
+/*    public static int iterativeCuSum(int n){
         int result = 0;
 
         for(int i = 0; i <= n; i++)
             result += i;
         return result;
-    }
+    }*/
+    // first attempt wrong - recursive algorithm to calculate a factorial
+/*    public static int iterativeCuSum(int n){
+        int result = 0;
+        for (int i = 0; i <= n; i++)
+            result = iterativeCuSum(n-1)*n;
+        return result;
+    }*/
 
     // here is the recursive version
-    public static int recursiveCuSum(int n) {
+/*    public static int recursiveCuSum(int n) {
         if (n == 1)
             return 1;
         else
             return (n + recursiveCuSum(n - 1));
+    }*/
+
+    // recursive algorithm to calculate a factorial
+    public static int recursiveCuSum(int n) {
+        if (n == 1)
+            return 1;
+        else
+            return (n * recursiveCuSum(n - 1));
     }
+
+
+
 
 
 
